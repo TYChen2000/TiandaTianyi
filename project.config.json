@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "miniprogram/",
   "cloudfunctionRoot": "cloudfunctions/",
-  "projectname": "go-training-management",
+  "projectname": "围棋培训管理",
   "appid": "touristappid",
   "setting": {
     "urlCheck": false

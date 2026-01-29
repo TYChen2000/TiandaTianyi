@@ -1,7 +1,7 @@
 {
   "name": "api",
   "version": "1.0.0",
-  "description": "Cloud functions for Go training mini program",
+  "description": "围棋培训管理小程序云函数",
   "main": "index.js",
   "dependencies": {
     "wx-server-sdk": "latest"
