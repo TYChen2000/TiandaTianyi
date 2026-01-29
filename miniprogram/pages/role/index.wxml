@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="card">
+    <view class="section-title">围棋培训管理 v1</view>
+    <view wx:if="{{loading}}">正在加载用户身份...</view>
+    <view wx:elif="{{userRole}}">当前身份：{{userRole}} {{userName}}</view>
+    <view wx:else>当前身份未绑定，请先在云数据库配置 users 集合。</view>
+  </view>
+
+  <view class="card">
+    <view class="section-title">进入角色</view>
+    <view class="btn-primary" bindtap="goTeacher">老师端</view>
+    <view style="height:16rpx"></view>
+    <view class="btn-secondary" bindtap="goParent">家长端</view>
+  </view>
+</view>
