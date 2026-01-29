@@ -1,0 +1,9 @@
+{
+  "miniprogramRoot": "miniprogram/",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "projectname": "go-training-management",
+  "appid": "touristappid",
+  "setting": {
+    "urlCheck": false
+  }
+}

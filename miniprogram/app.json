@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/role/index",
+    "pages/teacher/classes/index",
+    "pages/teacher/calendar/index",
+    "pages/teacher/lesson/index",
+    "pages/teacher/student/index",
+    "pages/parent/dashboard/index",
+    "pages/parent/history/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "围棋培训管理",
+    "navigationBarTextStyle": "black"
+  }
+}
