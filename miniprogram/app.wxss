@@ -1,0 +1,50 @@
+page {
+  background: #f7f7f7;
+  color: #1f1f1f;
+  font-size: 28rpx;
+}
+
+.container {
+  padding: 24rpx;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 6rpx 20rpx rgba(0, 0, 0, 0.04);
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  margin-bottom: 16rpx;
+}
+
+.btn-primary {
+  background: #1b73e8;
+  color: #ffffff;
+  border-radius: 8rpx;
+  padding: 16rpx 24rpx;
+  text-align: center;
+}
+
+.btn-secondary {
+  background: #eef4ff;
+  color: #1b73e8;
+  border-radius: 8rpx;
+  padding: 16rpx 24rpx;
+  text-align: center;
+}
+
+.tag {
+  display: inline-block;
+  padding: 6rpx 14rpx;
+  border-radius: 999rpx;
+  background: #eef4ff;
+  color: #1b73e8;
+  font-size: 22rpx;
+  margin-right: 10rpx;
+  margin-bottom: 10rpx;
+}

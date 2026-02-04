@@ -1,0 +1,43 @@
+<view class="container">
+  <view class="card">
+    <view class="section-title">课程详情</view>
+    <view>{{lessonInfo.date}} {{lessonInfo.time}}</view>
+  </view>
+
+  <view wx:if="{{loading}}">正在加载...</view>
+  <view wx:elif="{{error}}">{{error}}</view>
+  <view wx:else>
+    <view wx:for="{{studentItems}}" wx:key="studentId" class="card">
+      <view class="section-title">{{item.name}}</view>
+
+      <view>出勤状态</view>
+      <picker mode="selector" range="{{attendanceOptions}}" bindchange="onPickerChange" data-index="{{index}}" data-field="attendance">
+        <view class="tag">{{item.attendance}}</view>
+      </picker>
+
+      <view>星级评分</view>
+      <picker mode="selector" range="{{ratingOptions}}" bindchange="onPickerChange" data-index="{{index}}" data-field="rating">
+        <view class="tag">{{item.rating}}</view>
+      </picker>
+
+      <view>老师评语</view>
+      <input placeholder="一句话评语" value="{{item.comment}}" data-index="{{index}}" bindinput="onCommentInput" />
+
+      <view>课后要求</view>
+      <checkbox-group data-index="{{index}}" bindchange="onRequirementChange">
+        <label wx:for="{{requirementOptions}}" wx:for-item="req" wx:key="*this" style="margin-right:16rpx;">
+          <checkbox value="{{req}}" checked="{{item.requirements.indexOf(req) !== -1}}" />{{req}}
+        </label>
+      </checkbox-group>
+
+      <view>奖励点数</view>
+      <input type="number" value="{{item.reward}}" data-index="{{index}}" bindinput="onRewardInput" />
+
+      <view style="height:16rpx"></view>
+      <view class="btn-primary" data-index="{{index}}" bindtap="saveStudent">保存本学生记录</view>
+      <view style="height:12rpx"></view>
+      <view class="btn-secondary" data-id="{{item.studentId}}" bindtap="goStudentHistory">查看历史记录</view>
+    </view>
+    <view wx:if="{{studentItems.length === 0}}" class="card">暂无学生</view>
+  </view>
+</view>

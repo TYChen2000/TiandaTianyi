@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="section-title">历史课程记录</view>
+  <view wx:if="{{loading}}">正在加载...</view>
+  <view wx:elif="{{error}}">{{error}}</view>
+  <view wx:else>
+    <view wx:for="{{records}}" wx:key="_id" class="card">
+      <view>{{item.date}} {{item.time}}</view>
+      <view class="tag">{{item.attendance}}</view>
+      <view class="tag">{{item.rating}}</view>
+      <view>评语：{{item.comment || '暂无'}}</view>
+      <view>要求：{{item.requirements || '无'}}</view>
+      <view>奖励：{{item.reward}}</view>
+    </view>
+    <view wx:if="{{records.length === 0}}" class="card">暂无历史记录</view>
+  </view>
+</view>

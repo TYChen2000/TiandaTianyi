@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="section-title">选择班级</view>
+  <view wx:if="{{loading}}">正在加载...</view>
+  <view wx:elif="{{error}}">{{error}}</view>
+  <view wx:else>
+    <view wx:for="{{classes}}" wx:key="_id" class="card">
+      <view>{{item.name}}</view>
+      <view class="tag">{{item.scheduleSummary}}</view>
+      <view style="height:16rpx"></view>
+      <view class="btn-primary" data-id="{{item._id}}" bindtap="goCalendar">查看课程日历</view>
+    </view>
+    <view wx:if="{{classes.length === 0}}" class="card">暂无班级，请在数据库添加。</view>
+  </view>
+</view>
